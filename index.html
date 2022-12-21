@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="form">
+      <h1>Performance Objectives PDF Generator</h1>
+      <button id="clearButton">Clear Defaults</button>
+      <form>
+        <div>
+          <label for="testName">Test Name</label>
+          <input name="testName" id="testName" type="text" />
+        </div>
+        <div>
+          <label for="testNumber">Test #</label>
+          <input name="testNumber" id="testNumber" type="number" />
+        </div>
+        <div>
+          <label for="instructorsName">Instructor's Name</label>
+          <input name="instructorsName" id="instructorsName" type="text" />
+        </div>
+        <div>
+          <label for="testDate">Test Date</label>
+          <input name="testDate" id="testDate" type="date" />
+        </div>
+        <div>
+          <label for="school">School</label>
+          <input name="school" id="school" type="text" />
+        </div>
+        <div>
+          <label for="district">District</label>
+          <input name="district" id="district" type="text" />
+        </div>
+        <div>
+          <label for="numberStudents"># students in course</label>
+          <input name="numberStudents" id="numberStudents" type="number" />
+        </div>
+        <div>
+          <label for="numberTested"># students tested</label>
+          <input name="numberTested" id="numberTest" type="number" />
+        </div>
+        <div>
+          <label for="numberPassedTest"
+            ># students who passed the <em>online test</em> at or above
+            80%</label
+          >
+          <input name="numberPassedTest" id="numberPassedTest" type="number" />
+        </div>
+        <div>
+          <label for="numberPassedPO"
+            ># students who passed each <em>performance objective</em> at or
+            above 80%</label
+          >
+          <input name="numberPassedPO" id="numberPassedPO" type="number" />
+        </div>
+        <div>
+          <label for="numberCert"
+            ># students who earned a skill certificate</label
+          >
+          <input name="numberCert" id="numberCert" type="number" />
+        </div>
+        <div>
+          <label for="numberNoTest"># students who did not test</label>
+          <input name="numberNoTest" id="numberNoTest" type="number" />
+        </div>
+        <div>
+          <label for="classGradebook"
+            >Recorded and identified in the class gradebook</label
+          >
+          <input
+            type="checkbox"
+            checked="true"
+            name="classGradebook"
+            id="classGradebook"
+          />
+        </div>
+        <h3>List of students who did not test:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Reason for not testing</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <button id="addRow">Add row</button>
+        <button id="removeRow" disabled="true">Remove row</button>
+        <hr />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
