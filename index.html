@@ -18,7 +18,18 @@
     <section id="form">
       <h1>Performance Objectives PDF Generator</h1>
       <button id="clearButton">Clear Defaults</button>
-      <form>
+      <form
+        name="povd"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <div hidden aria-hidden="true">
+          <label>
+            Don’t fill this out if you're human:
+            <input name="bot-field" />
+          </label>
+        </div>
         <div>
           <label for="testName">Test Name</label>
           <input name="testName" id="testName" type="text" />
